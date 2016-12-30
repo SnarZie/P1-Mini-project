@@ -1,0 +1,4 @@
+Symlinking /home/jacob/phantom_image_ws/devel/share/phantom/cmake/phantomConfig.cmake
+Symlinking /home/jacob/phantom_image_ws/devel/share/phantom/cmake/phantomConfig-version.cmake
+Symlinking /home/jacob/phantom_image_ws/devel/lib/pkgconfig/phantom.pc
+Symlinking /home/jacob/phantom_image_ws/devel/lib/phantom/phantom_node

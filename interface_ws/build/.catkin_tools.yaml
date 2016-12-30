@@ -1,0 +1,6 @@
+devel_space: /home/jacob/phantom_image_ws/devel
+install: false
+install_space: /home/jacob/phantom_image_ws/install
+profile: default
+source_space: /home/jacob/phantom_image_ws/src
+workspace: /home/jacob/phantom_image_ws

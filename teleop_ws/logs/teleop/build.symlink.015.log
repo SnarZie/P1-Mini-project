@@ -1,0 +1,16 @@
+Symlinking /home/jacob/teleop_ws/devel/share/teleop/cmake/teleopConfig.cmake
+Symlinking /home/jacob/teleop_ws/devel/share/teleop/cmake/teleopConfig-version.cmake
+Symlinking /home/jacob/teleop_ws/devel/lib/teleop/teleop_node
+Symlinking /home/jacob/teleop_ws/devel/lib/pkgconfig/teleop.pc
+Cleaning: (/home/b214/teleop_ws/devel/.private/teleop/lib/pkgconfig/teleop.pc, /home/b214/teleop_ws/devel/lib/pkgconfig/teleop.pc)
+Cleaning: (/home/b214/teleop_ws/devel/.private/teleop/lib/teleop/teleop_node, /home/b214/teleop_ws/devel/lib/teleop/teleop_node)
+Cleaning: (/home/b214/teleop_ws/devel/.private/teleop/share/teleop/cmake/teleopConfig.cmake, /home/b214/teleop_ws/devel/share/teleop/cmake/teleopConfig.cmake)
+Cleaning: (/home/b214/teleop_ws/devel/.private/teleop/share/teleop/cmake/teleopConfig-version.cmake, /home/b214/teleop_ws/devel/share/teleop/cmake/teleopConfig-version.cmake)
+Unlinking: /home/b214/teleop_ws/devel/lib/pkgconfig/teleop.pc
+Already unlinked: {}
+Unlinking: /home/b214/teleop_ws/devel/lib/teleop/teleop_node
+Already unlinked: {}
+Unlinking: /home/b214/teleop_ws/devel/share/teleop/cmake/teleopConfig.cmake
+Already unlinked: {}
+Unlinking: /home/b214/teleop_ws/devel/share/teleop/cmake/teleopConfig-version.cmake
+Already unlinked: {}

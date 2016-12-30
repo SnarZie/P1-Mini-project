@@ -1,0 +1,8 @@
+prefix=/home/jacob/teleop_ws/install
+
+Name: teleop
+Description: Description of teleop
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jacob/teleop_ws/install/lib 
+Requires: 

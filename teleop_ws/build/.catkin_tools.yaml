@@ -1,0 +1,6 @@
+devel_space: /home/jacob/teleop_ws/devel
+install: false
+install_space: /home/jacob/teleop_ws/install
+profile: default
+source_space: /home/jacob/teleop_ws/src
+workspace: /home/jacob/teleop_ws

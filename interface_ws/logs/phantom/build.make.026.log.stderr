@@ -1,0 +1,22 @@
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:[m[K In function ‘[01m[Kvoid _listen_cb(const ConstPtr&)[m[K’:
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:17:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:20:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:23:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:26:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:29:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:32:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kbreak[m[K’
+   break;
+[01;32m[K   ^[m[K
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+make: *** [all] Error 2

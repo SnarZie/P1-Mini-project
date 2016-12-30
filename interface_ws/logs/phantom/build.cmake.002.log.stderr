@@ -1,0 +1,11 @@
+[31m[1mCMake Error[0m at /home/jacob/phantom_image_ws/src/phantom/CMakeLists.txt:125 (add_executable):
+  Cannot find source file:
+
+    src/phantom_node.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: phantom_node
+CMake Error: Cannot determine link language for target "phantom_node".

@@ -1,0 +1,28 @@
+Not searching for unused variables given on the command line.
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/jacob/phantom_image_ws/devel/.private/phantom
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/jacob/phantom_image_ws/devel;/opt/ros/kinetic
+[36m--[0m This workspace overlays: /home/jacob/phantom_image_ws/devel;/opt/ros/kinetic
+[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python
+[36m--[0m Using Debian Python package layout
+[36m--[0m Using empy: /usr/bin/empy
+[36m--[0m Using CATKIN_ENABLE_TESTING: ON
+[36m--[0m Call enable_testing()
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/jacob/phantom_image_ws/build/phantom/test_results
+[36m--[0m Found gtest sources under '/usr/src/gtest': gtests will be built
+[36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
+[36m--[0m catkin 0.7.4
+[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[36m--[0m Configuring done
+[31m[1mCMake Error[0m at /home/jacob/phantom_image_ws/src/phantom/CMakeLists.txt:125 (add_executable):
+  Cannot find source file:
+
+    src/phantom_node.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .m .M .mm .h .hh .h++ .hm .hpp
+  .hxx .in .txx
+
+
+CMake Error: CMake can not determine linker language for target: phantom_node
+CMake Error: Cannot determine link language for target "phantom_node".
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /home/jacob/phantom_image_ws/build/phantom

@@ -1,0 +1,9 @@
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:28:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kchatter_sub[m[K’ does not name a type
+   chatter_sub = n.subscribe( "chatter", 10, &Image::_listen_cb, this);
+[01;32m[K   ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:29:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kchatter2_sub[m[K’ does not name a type
+   chatter2_sub = n.subscribe( "chatter2", 10, &Image::_clear_cb, this);
+[01;32m[K   ^[m[K
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+make: *** [all] Error 2

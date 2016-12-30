@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target phantom_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/phantom_node.dir/src/phantom.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/jacob/phantom_image_ws/devel/.private/phantom/lib/phantom/phantom_node[0m
+[100%] Built target phantom_node

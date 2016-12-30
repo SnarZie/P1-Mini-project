@@ -1,0 +1,15 @@
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:11:6:[m[K [01;31m[Kerror: [m[K‘[01m[KSubcriber[m[K’ in namespace ‘[01m[Kros[m[K’ does not name a type
+ ros::Subcriber chatter_sub;
+[01;32m[K      ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:12:6:[m[K [01;31m[Kerror: [m[K‘[01m[KSubcriber[m[K’ in namespace ‘[01m[Kros[m[K’ does not name a type
+ ros::Subcriber chatter2_sub;
+[01;32m[K      ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:21:2:[m[K [01;31m[Kerror: [m[K‘[01m[Kchatter_sub[m[K’ does not name a type
+  chatter_sub = n.subscribe( "chatter", 10, &Route::_listen_cb, this)
+[01;32m[K  ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:23:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+ }
+[01;32m[K ^[m[K
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+make: *** [all] Error 2

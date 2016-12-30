@@ -1,0 +1,32 @@
+[35m[1mScanning dependencies of target phantom_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/phantom_node.dir/src/phantom.cpp.o[0m
+In file included from [01m[K/opt/ros/kinetic/include/ros/ros.h:40:0[m[K,
+                 from [01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:1[m[K:
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:[m[K In function ‘[01m[Kvoid _clear_cb(const ConstPtr&)[m[K’:
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:38:52:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kcstr[m[K’ in ‘[01m[K(& msg)->boost::shared_ptr<T>::operator-><const std_msgs::Char_<std::allocator<void> > >()->std_msgs::Char_<std::allocator<void> >::data[m[K’, which is of non-class type ‘[01m[Kconst _data_type {aka const unsigned char}[m[K’
+  ROS_INFO("I heard : [%s] on chatter 2", msg->data.cstr())
+[01;32m[K                                                    ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:345:165:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION_WITH_FILTER[m[K’
+     ::ros::console::print(filter, __rosconsole_define_location__loc.logger_, __rosconsole_define_location__loc.level_, __FILE__, __LINE__, __ROSCONSOLE_FUNCTION__, __VA_ARGS__)
+[01;32m[K                                                                                                                                                                     ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:378:7:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROSCONSOLE_PRINT_AT_LOCATION[m[K’
+       ROSCONSOLE_PRINT_AT_LOCATION(__VA_ARGS__); \
+[01;32m[K       ^[m[K
+[01m[K/opt/ros/kinetic/include/ros/console.h:560:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG_COND[m[K’
+ #define ROS_LOG(level, name, ...) ROS_LOG_COND(true, level, name, __VA_ARGS__)
+[01;32m[K                                   ^[m[K
+[01m[K/opt/ros/kinetic/include/rosconsole/macros_generated.h:110:23:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_LOG[m[K’
+ #define ROS_INFO(...) ROS_LOG(::ros::console::levels::Info, ROSCONSOLE_DEFAULT_NAME, __VA_ARGS__)
+[01;32m[K                       ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:38:2:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KROS_INFO[m[K’
+  ROS_INFO("I heard : [%s] on chatter 2", msg->data.cstr())
+[01;32m[K  ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:41:1:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+ }
+[01;32m[K ^[m[K
+CMakeFiles/phantom_node.dir/build.make:62: recipe for target 'CMakeFiles/phantom_node.dir/src/phantom.cpp.o' failed
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+CMakeFiles/Makefile2:1059: recipe for target 'CMakeFiles/phantom_node.dir/all' failed
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

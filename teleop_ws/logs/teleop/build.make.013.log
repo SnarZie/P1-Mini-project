@@ -1,0 +1,51 @@
+[35m[1mScanning dependencies of target teleop_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/src/teleop.cpp.o[0m
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:50:18:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+     std::cout << "There are six points\n
+[01;32m[K                  ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:50:5:[m[K [01;31m[Kerror: [m[Kmissing terminating " character
+     std::cout << "There are six points\n
+[01;32m[K     ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:51:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to A: pointA\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:52:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to B: pointB\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:53:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to C: pointC\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:54:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to D: pointD\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:55:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to E: pointE\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:56:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+                   to go to F: pointF\n\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:56:19:[m[K [01;31m[Kerror: [m[Kstray ‘[01m[K\[m[K’ in program
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:57:34:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+                   User input:    ";
+[01;32m[K                                  ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:57:19:[m[K [01;31m[Kerror: [m[Kmissing terminating " character
+                   User input:    ";
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:77:0:[m[K [01;31m[Kerror: [m[Kunterminated argument list invoking macro "ROS_INFO"
+ }
+[01;32m[K ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:51:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kto[m[K’ was not declared in this scope
+                   to go to A: pointA\n
+[01;32m[K                   ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:60:5:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+     ROS_INFO("%c", msg.data;
+[01;32m[K     ^[m[K
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:60:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:60:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+CMakeFiles/teleop_node.dir/build.make:62: recipe for target 'CMakeFiles/teleop_node.dir/src/teleop.cpp.o' failed
+make[2]: *** [CMakeFiles/teleop_node.dir/src/teleop.cpp.o] Error 1
+CMakeFiles/Makefile2:643: recipe for target 'CMakeFiles/teleop_node.dir/all' failed
+make[1]: *** [CMakeFiles/teleop_node.dir/all] Error 2
+Makefile:138: recipe for target 'all' failed
+make: *** [all] Error 2

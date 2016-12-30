@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jacob/teleop_ws/devel/.private/teleop/setup.sh

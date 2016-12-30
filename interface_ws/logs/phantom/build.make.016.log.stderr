@@ -1,0 +1,7 @@
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:[m[K In constructor ‘[01m[KImage::Image()[m[K’:
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:27:2:[m[K [01;31m[Kerror: [m[Kexpected identifier before ‘[01m[K{[m[K’ token
+  {
+[01;32m[K  ^[m[K
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+make: *** [all] Error 2

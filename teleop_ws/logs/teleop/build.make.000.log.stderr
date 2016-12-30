@@ -1,0 +1,9 @@
+[01m[K/home/b214/teleop_ws/src/teleop/src/teleop.cpp:20:75:[m[K [01;35m[Kwarning: [m[Knon-static data member initializers only available with -std=c++11 or -std=gnu++11
+ ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
+[01;32m[K                                                                           ^[m[K
+CMakeFiles/teleop_node.dir/src/teleop.cpp.o: In function `main':
+teleop.cpp:(.text+0xce): undefined reference to `TeleopTurtle::TeleopTurtle()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/b214/teleop_ws/devel/.private/teleop/lib/teleop/teleop_node] Error 1
+make[1]: *** [CMakeFiles/teleop_node.dir/all] Error 2
+make: *** [all] Error 2

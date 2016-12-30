@@ -1,0 +1,6 @@
+[31m[1mCMake Error[0m at /home/jacob/phantom_image_ws/src/phantom/CMakeLists.txt:132 (target_link_libraries):
+  Cannot specify link libraries for target
+  "phantom_node/opt/ros/kinetic/lib/libactionlib.so" which is not built by
+  this project.
+
+

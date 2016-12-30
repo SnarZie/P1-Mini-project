@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jacob/phantom_image_ws/devel/.private/phantom/setup.sh

@@ -1,0 +1,8 @@
+prefix=/home/jacob/phantom_image_ws/install
+
+Name: phantom
+Description: Description of phantom
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/jacob/phantom_image_ws/install/lib 
+Requires: 

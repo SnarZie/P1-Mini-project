@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target teleop_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/teleop_node.dir/src/teleop.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/jacob/teleop_ws/devel/.private/teleop/lib/teleop/teleop_node[0m
+[100%] Built target teleop_node

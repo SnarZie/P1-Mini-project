@@ -1,0 +1,16 @@
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:29:46:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ has not been declared
+   chatter_sub = n.subscribe( "chatter", 10, &Image::_listen_cb, this);
+[01;32m[K                                              ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:29:65:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   chatter_sub = n.subscribe( "chatter", 10, &Image::_listen_cb, this);
+[01;32m[K                                                                 ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:30:48:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ has not been declared
+   chatter2_sub = n.subscribe( "chatter2", 10, &Image::_clear_cb, this);
+[01;32m[K                                                ^[m[K
+[01m[K/home/jacob/phantom_image_ws/src/phantom/src/phantom.cpp:30:66:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+   chatter2_sub = n.subscribe( "chatter2", 10, &Image::_clear_cb, this);
+[01;32m[K                                                                  ^[m[K
+make[2]: *** [CMakeFiles/phantom_node.dir/src/phantom.cpp.o] Error 1
+make[1]: *** [CMakeFiles/phantom_node.dir/all] Error 2
+make: *** [all] Error 2
