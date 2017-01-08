@@ -6,54 +6,58 @@
 #include <move_base_msgs/MoveBaseAction.h>
 #include <visualization_msgs/Marker.h>
 #include <visualization_msgs/MarkerArray.h>
-#include "std_msgs/String.h"
-#include "std_msgs/Char.h"
-#include <iostream>
-
+#include <std_msgs/String.h>
+#include <std_msgs/Char.h>
 
 class Route
 {
 private:
     unsigned int points_initialized;
+    bool has_goal;
     geometry_msgs::PointStamped zero, pointA, pointB, pointC, pointD, pointE, pointF;
     actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> client;
     visualization_msgs::MarkerArray marker_array;
     ros::Publisher marker_pub;
     ros::Subscriber click_sub;
     ros::Subscriber chatter_sub;
-    ros::Publisher chatter2_pub;
+    ros::Publisher interface_pub;
 
     //A method that sends a point to the robot
-    void _send_goal(const geometry_msgs::PointStamped& goal_point, const geometry_msgs::PointStamped& goal_point2)
+    void _send_goal(const geometry_msgs::PointStamped& goal_point)
     {
-        move_base_msgs::MoveBaseGoal goal;
-        goal.target_pose.header.frame_id = goal_point.header.frame_id;
-        goal.target_pose.pose.position = goal_point.point;
-        goal.target_pose.pose.orientation.z = 1;
-        client.sendGoal(goal, boost::bind(&Route::_send2_goal, this , goal_point2)); 
-        //When the goal is reached it opens the "_target_reached_cb" function
-    }
+        has_goal = true;
 
-    void _send2_goal(const geometry_msgs::PointStamped& goal_point)
-    {
         move_base_msgs::MoveBaseGoal goal;
         goal.target_pose.header.frame_id = goal_point.header.frame_id;
         goal.target_pose.pose.position = goal_point.point;
         goal.target_pose.pose.orientation.z = 1;
+
         client.sendGoal(goal, boost::bind(&Route::_target_reached_cb, this, _1, _2)); 
         //When the goal is reached it opens the "_target_reached_cb" function
     }
 
-
     //A method that is run when the robot reaches it's goal point
     void _target_reached_cb(const actionlib::SimpleClientGoalState& state, const move_base_msgs::MoveBaseResultConstPtr& result)
     {
+        has_goal = false;
+        int total_time = 10 * 1000; //10 seconds
+        int time = 0;
+        while(time < total_time && !has_goal)
+        {
+            ros::Duration(0.001).sleep(); //delay of 10 ms
+            time++;
+        }
+
         //Make the robot go back to zero 
-        system("pause");
-        _send_goal(zero);
-        std_msgs::String msg;
-        msg.data = "clear";
-        chatter2_pub.publish(msg);
+        if(!has_goal)
+        {
+            _send_goal(zero);
+            
+            //Send a command to clear GUI
+            std_msgs::String msg;
+            msg.data = "clear";
+            interface_pub.publish(msg);
+        }
     }
 
     //A method that takes arguments to create a visual marker
@@ -143,51 +147,57 @@ private:
     }
 
     //The program that listens on the chatter node, hears the other program and then through a series of if statements decide which goal to send
-    void _listener_cb(const std_msgs::Char::ConstPtr& msg, const std_msgs::Char::ConstPtr& msg2)
+    void _listener_cb(const std_msgs::Char::ConstPtr& msg)
     {
-        ROS_INFO("I heard : [%c]", msg->data);
 
+        ROS_INFO("I heard: [%c]", msg->data); 
+    
         switch(msg->data) {
-              case 'A' : 
-                ROS_INFO("Setting goal to A");
-                _send_goal(pointA);
-                break;
-              case 'B' : 
-                  ROS_INFO("Setting goal to B");
-                  _send_goal(pointB);
-                  break;
-              case 'C' : 
-                  ROS_INFO("Setting goal to C");
-                  _send_goal(pointC);
-                  break;
-              case 'D' : 
-                  ROS_INFO("Setting goal to D");
-                  _send_goal(pointD);
-                  break;
-              case 'E' : 
-                  ROS_INFO("Setting goal to E");
-                  _send_goal(pointE);
-                  break;
-              case 'F' : 
-                  ROS_INFO("Setting goal to F");
-                  _send_goal(pointA);
-                  break;
-            default :
-                    ROS_INFO("Something went wrong!");
+          case 'A' : 
+            ROS_INFO("Setting goal to A");
+            _send_goal(pointA);
+            break;
+          case 'B' : 
+            ROS_INFO("Setting goal to B");
+            _send_goal(pointB);
+            break;
+          case 'C' : 
+            ROS_INFO("Setting goal to C");
+            _send_goal(pointC);
+            break;
+          case 'D' : 
+            ROS_INFO("Setting goal to D");
+            _send_goal(pointD);
+            break;
+          case 'E' : 
+            ROS_INFO("Setting goal to E");
+            _send_goal(pointE);
+            break;
+          case 'F' : 
+            ROS_INFO("Setting goal to F");
+            _send_goal(pointA);
+            break;
+
+        default :
+            ROS_INFO("Something went wrong!");  
         }
     }
     
-//This is the nodes used for the program, and where the nodes are used
 public:
+
+    //Route constructer and destructer
     Route() :
         client("move_base"), points_initialized(0)
     {
+        has_goal = false;
+
         ros::NodeHandle n;
         marker_pub = n.advertise<visualization_msgs::MarkerArray>("visualization_marker_array", 1);
         
-        chatter2_pub = n.advertise<std_msgs::String>("chatter2", 1);
+        interface_pub = n.advertise<std_msgs::String>("interface", 1);
+        
         if (points_initialized < 7)
-        click_sub = n.subscribe( "clicked_point", 100, &Route::_clicked_point_cb, this);
+            click_sub = n.subscribe( "clicked_point", 100, &Route::_clicked_point_cb, this);
 
         chatter_sub = n.subscribe( "chatter", 10, &Route::_listener_cb, this);
     };
@@ -199,6 +209,7 @@ int main(int argc, char *argv[])
 {
     ros::init(argc, argv, "navigation");
 
+    //Initialize a Route object
     Route r;
     
     ros::spin();
